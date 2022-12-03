@@ -12,15 +12,15 @@
 // Если введено подходящее количество символов, то border инпута становится зелёным,
 // если неправильное - красным.
 
-const inputRef = document.querySelector(`#validation-input`);
-const valueAtribute = inputRef.getAttribute(`data-length`);
+const inputEl = document.querySelector(`#validation-input`);
+const valueAtribute = inputEl.getAttribute(`data-length`);
 
-function changeClass(className) {
-  inputRef.classList.add(className);
+function changeClass(name) {
+  inputEl.classList.add(name);
 }
 
-function removeClass(className) {
-  inputRef.classList.remove(className);
+function removeClass(name) {
+  inputEl.classList.remove(name);
 }
 
 function checkingEnteredValue(event) {
@@ -29,4 +29,4 @@ function checkingEnteredValue(event) {
     : changeClass(`invalid`);
 }
 
-inputRef.addEventListener(`blur`, checkingEnteredValue);
+inputEl.addEventListener(`blur`, checkingEnteredValue);
