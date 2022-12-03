@@ -42,11 +42,11 @@
 // ===================================================================================
 // part 2
 
-const categoriesRef = document.querySelectorAll(".item");
-console.log(`Number of categories: ${categoriesRef.length}`);
+const categoriesEl = document.querySelectorAll(".item");
+console.log(`Number of categories: ${categoriesEl.length}`);
 console.log(` `);
 
-categoriesRef.forEach((category) => {
+categoriesEl.forEach((category) => {
   console.log(`Category: ${category.firstElementChild.textContent}`);
   console.log(`Elements: ${category.lastElementChild.children.length}`);
 });

@@ -24,8 +24,8 @@ function createElementMarkup (ingredients) {
 }
 const elementMarkup = createElementMarkup(ingredients)
 
-const ingredientsRef = document.querySelector(`#ingredients`);
-ingredientsRef.append(...elementMarkup);
+const ingredientsEl = document.querySelector(`#ingredients`);
+ingredientsEl.append(...elementMarkup);
 
 
 
