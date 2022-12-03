@@ -5,15 +5,15 @@
 // <input type="text" id="name-input" placeholder="Please enter your name" />
 // <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
-const inputFormRef = document.querySelector(`#name-input`);
-const userNameRef = document.querySelector(`#name-output`);
+const inputFormEl = document.querySelector(`#name-input`);
+const userNameEl = document.querySelector(`#name-output`);
 
-inputFormRef.addEventListener(`input`, changeNameToValueEnteredInInput);
+inputFormEl.addEventListener(`input`, changeNameToValue);
 
-function changeNameToValueEnteredInInput(event) {
-  if (!event.currentTarget.value.trim()) {
-    userNameRef.textContent = `Anonymous`;
+function changeNameToValue(event) {
+  if (event.currentTarget.value) {
+    userNameEl.textContent = event.currentTarget.value;    
   } else {
-    userNameRef.textContent = event.currentTarget.value;
+    userNameEl.textContent = `Anonymous`;
   }
 }
