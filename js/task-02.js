@@ -23,6 +23,7 @@ function createElementMarkup (ingredients) {
     return element;
   })
 }
+
 const elementMarkup = createElementMarkup(ingredients)
 
 const ingredientsEl = document.querySelector(`#ingredients`);
