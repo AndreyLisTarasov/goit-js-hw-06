@@ -25,7 +25,7 @@ function removeClass(name) {
 
 function checkingEnteredValue(event) {
   event.currentTarget.value.length === Number(valueAtribute)
-    ? changeClass(`valid`) || removeClass(`invalid`)
+    ? changeClass(`valid`) || changeClass(`invalid`)
     : changeClass(`invalid`);
 }
 
