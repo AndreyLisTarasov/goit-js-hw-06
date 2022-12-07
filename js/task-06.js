@@ -25,8 +25,12 @@ function removeClass(name) {
 
 function checkingEnteredValue(event) {
   event.currentTarget.value.length === Number(valueAtribute)
-    ? changeClass(`valid`) || changeClass(`invalid`)
-    : changeClass(`invalid`);
+    ? changeClass(`valid`) || removeClass(`invalid`)
+    : removeClass('valid') || changeClass(`invalid`);
 }
 
 inputEl.addEventListener(`blur`, checkingEnteredValue);
+
+
+
+
